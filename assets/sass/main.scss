@@ -1,0 +1,11 @@
+// @import './defaults';
+@import './modules/moviethumbs';
+@import './modules/header';
+@import './modules/popup';
+@import './modules/music';
+@import './modules/routeError';
+
+.pop-close{
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}

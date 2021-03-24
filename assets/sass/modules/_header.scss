@@ -1,0 +1,27 @@
+.main-header{
+    nav{
+        background-color: #292929;
+    }
+    
+    nav ul li:hover {
+        background-color: white;
+        color: crimson;
+     }
+
+     li.active-nav{
+        background-color: rgba(white, 0.45);
+    }
+}
+
+a.brand-logo{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.dropdown-content{
+    margin-top: 20px;
+    a{
+        color: #000;
+    }
+}

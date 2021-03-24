@@ -1,0 +1,46 @@
+.error-box{
+    width: 100%;
+    height: 100vh;
+    background: #292929;
+
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    position: relative;
+
+    .er-position{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid crimson;
+        padding: 50px;
+
+        .gif-include{
+            width: 50%;
+            height:auto;
+        }
+
+        .error-lines{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3{
+                letter-spacing: 1px;
+            }
+
+            a{
+                color: #fff;
+            }
+
+        }
+ 
+    }
+}
