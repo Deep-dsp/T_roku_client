@@ -1,38 +1,33 @@
 import LoginComponent from './components/TheLoginComponent.js';
 import AllUsers from './components/AllUsers.js';
+import HomeComponent from './components/TheHomeComponent.js';
 
 const router = new VueRouter({
     routes:[
         { path: '/', name: 'root', component: LoginComponent},
-        { path: '/users', name: 'users', component: AllUsers}
+        { path: '/users', name: 'users', component: AllUsers},
+        { path: '/home', name: 'home', component: HomeComponent, props: true}
     ]
 });
 
   (()=>{
       const vm = new Vue({
           data:{
-              allMovies: [],
-              allMusic: []
+              authenticated: false,
+              isAdmin: false
           },
           created: function(){
               console.log("inside Vue Js");
-            //   fetch('/api/movies')
-            //         .then(res=>res.json())
-            //         .then(data=>{
-            //             console.table(data);
-            //             this.allMovies = data;
-            //         })
-            //   fetch('/api/music')
-            //         .then(res=>res.json())
-            //         .then(data=>{
-            //             console.table(data);
-            //             this.allMusic = data;
-            //         })
-            //   .catch(err=>console.error(err));
+            
           },
 
           methods:{
-
+            logout(){
+                if(localStorage.getItem('cacheuser')){
+                    window.localStorage.removeItem('cacheuser');
+                }
+                this.$router.push({name: "root"});
+            }
           },
 
           components:{
